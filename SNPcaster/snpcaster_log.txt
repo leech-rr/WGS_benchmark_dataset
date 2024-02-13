@@ -1,0 +1,194 @@
+bactsnp_snippy_gubbins.sh
+===================BactSNP===================
+checking input files...
+detailed log is printed in <output directory>/bactsnp_out
+started 'trim_reads' module
+finished 'trim_reads' module
+started 'assemble_reads' module
+finished 'assemble_reads' module
+started 'map_reads' module
+finished 'map_reads' module
+started 'get_pseudo_genomes' module
+finished 'get_pseudo_genomes' module
+started 'get_snps' module
+finished 'get_snps' module
+started 'get_replaced_pseudo_genomes' module
+finished 'get_replaced_pseudo_genomes' module
+bactsnp completed!
+===================Snippy===================
+This is snippy-core 4.6.0
+Obtained from http://github.com/tseemann/snippy
+Enabling bundled tools for linux
+Found any2fasta - /home/ngs/miniconda3/envs/snippy/bin/any2fasta
+Found samtools - /home/ngs/miniconda3/envs/snippy/bin/samtools
+Found minimap2 - /home/ngs/miniconda3/envs/snippy/bin/minimap2
+Found bedtools - /home/ngs/miniconda3/envs/snippy/bin/bedtools
+Found snp-sites - /home/ngs/miniconda3/envs/snippy/bin/snp-sites
+Saving reference FASTA: core.ref.fa
+This is any2fasta 0.4.2
+Opening 'Sakai_BA000007.fas'
+Detected FASTA format
+Read 78554 lines from 'Sakai_BA000007.fas'
+Wrote 1 sequences from FASTA file.
+Processed 1 files.
+Done.
+Loaded 1 sequences totalling 5498578 bp.
+Will mask 0 regions totalling 0 bp ~ 0.00%
+0	DRR147067	snp=77237	del=0	ins=0	het=0	unaligned=1065458
+1	DRR147069	snp=77383	del=0	ins=0	het=0	unaligned=1056443
+2	DRR147072	snp=77289	del=0	ins=0	het=0	unaligned=1059239
+3	DRR147075	snp=77155	del=0	ins=0	het=0	unaligned=1062187
+4	DRR147079	snp=77193	del=0	ins=0	het=0	unaligned=1055344
+5	DRR149584	snp=275	del=0	ins=0	het=0	unaligned=325149
+6	DRR149590	snp=271	del=0	ins=0	het=0	unaligned=357918
+7	DRR149598	snp=308	del=0	ins=0	het=0	unaligned=344753
+8	DRR149646	snp=273	del=0	ins=0	het=0	unaligned=326347
+9	DRR149690	snp=272	del=0	ins=0	het=0	unaligned=332083
+10	DRR149748	snp=1525	del=0	ins=0	het=0	unaligned=405001
+11	DRR149750	snp=1518	del=0	ins=0	het=0	unaligned=403182
+12	DRR149762	snp=1518	del=0	ins=0	het=0	unaligned=404391
+13	DRR149766	snp=1504	del=0	ins=0	het=0	unaligned=409202
+14	DRR149771	snp=1505	del=0	ins=0	het=0	unaligned=455613
+Opening: core.tab
+Opening: core.vcf
+Processing contig: Sakai_BA000007
+Generating core.full.aln
+Creating TSV file: core.txt
+Running: snp-sites -c -o core.aln core.full.aln
+You can mask columns using '--mask BEDFILE --mask-char X'
+Done.
+===================Snippy results conversion ===================
+repeats.tsv
+2328 SNPs were removed as repeats
+This is pairsnp 0.3.1
+========================= gubbins ===========================
+
+--- Gubbins 2.4.1 ---
+
+Croucher N. J., Page A. J., Connor T. R., Delaney A. J., Keane J. A., Bentley S. D., Parkhill J., Harris S.R. "Rapid phylogenetic analysis of large samples of recombinant bacterial whole genome sequences using Gubbins". Nucleic Acids Res. 2015 Feb 18;43(3):e15. doi: 10.1093/nar/gku1196.
+
+Checking dependencies...
+...done. Run time: 0.03 s
+
+Checking input files...
+...done. Run time: 2.07 s
+
+Filtering input alignment...
+...done. Run time: 3.35 s
+
+Running Gubbins to detect SNPs...
+gubbins /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/tmphqaaak3i/core.full.aln
+...done. Run time: 5.14 s
+
+Entering the main loop.
+
+*** Iteration 1 ***
+
+Constructing the phylogenetic tree with raxmlHPC-AVX2...
+raxmlHPC-AVX2 -f d -p 1 -m GTRCAT -V -s /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/core.full.aln.phylip -n core.full.iteration_1 > /dev/null 2>&1
+...done. Run time: 7.61 s
+
+Reconstructing ancestral sequences with raxmlHPC-AVX2...
+raxmlHPC-AVX2 -f A -p 1 -m GTRGAMMA -s /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/core.full.aln.phylip -n core.full.iteration_1.internal -t /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/tmphqaaak3i/core.full.iteration_1.tre.rooted > /dev/null 2>&1
+...done. Run time: 10.73 s
+
+Reinserting gaps into the alignment...
+...done. Run time: 18.55 s
+
+Running Gubbins to detect recombinations...
+gubbins -r -v core.full.aln.gaps.vcf -a 100 -b 10000 -f /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/tmphqaaak3i/core.full.aln -t core.full.iteration_1.tre -m 3 core.full.aln.gaps.snp_sites.aln
+...done. Run time: 50.75 s
+
+Checking for convergence...
+...done. Run time: 50.76 s
+
+*** Iteration 2 ***
+
+Constructing the phylogenetic tree with raxmlHPC-AVX2...
+raxmlHPC-AVX2 -f d -p 1 -m GTRCAT -V -s /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/core.full.iteration_1.tre.phylip -n core.full.iteration_2 -t /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/core.full.iteration_1.tre > /dev/null 2>&1
+...done. Run time: 52.49 s
+
+Reconstructing ancestral sequences with raxmlHPC-AVX2...
+raxmlHPC-AVX2 -f A -p 1 -m GTRGAMMA -s /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/core.full.aln.phylip -n core.full.iteration_2.internal -t /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/tmphqaaak3i/core.full.iteration_2.tre.rooted > /dev/null 2>&1
+...done. Run time: 55.40 s
+
+Reinserting gaps into the alignment...
+...done. Run time: 63.08 s
+
+Running Gubbins to detect recombinations...
+gubbins -r -v core.full.aln.gaps.vcf -a 100 -b 10000 -f /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/tmphqaaak3i/core.full.aln -t core.full.iteration_2.tre -m 3 core.full.aln.gaps.snp_sites.aln
+...done. Run time: 94.52 s
+
+Checking for convergence...
+...done. Run time: 94.53 s
+
+*** Iteration 3 ***
+
+Constructing the phylogenetic tree with raxmlHPC-AVX2...
+raxmlHPC-AVX2 -f d -p 1 -m GTRCAT -V -s /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/core.full.iteration_2.tre.phylip -n core.full.iteration_3 -t /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/core.full.iteration_2.tre > /dev/null 2>&1
+...done. Run time: 96.30 s
+
+Reconstructing ancestral sequences with raxmlHPC-AVX2...
+raxmlHPC-AVX2 -f A -p 1 -m GTRGAMMA -s /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/core.full.aln.phylip -n core.full.iteration_3.internal -t /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/tmphqaaak3i/core.full.iteration_3.tre.rooted > /dev/null 2>&1
+...done. Run time: 98.92 s
+
+Reinserting gaps into the alignment...
+...done. Run time: 106.48 s
+
+Running Gubbins to detect recombinations...
+gubbins -r -v core.full.aln.gaps.vcf -a 100 -b 10000 -f /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/tmphqaaak3i/core.full.aln -t core.full.iteration_3.tre -m 3 core.full.aln.gaps.snp_sites.aln
+...done. Run time: 138.34 s
+
+Checking for convergence...
+...done. Run time: 138.34 s
+
+*** Iteration 4 ***
+
+Constructing the phylogenetic tree with raxmlHPC-AVX2...
+raxmlHPC-AVX2 -f d -p 1 -m GTRCAT -V -s /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/core.full.iteration_3.tre.phylip -n core.full.iteration_4 -t /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/core.full.iteration_3.tre > /dev/null 2>&1
+...done. Run time: 140.08 s
+
+Reconstructing ancestral sequences with raxmlHPC-AVX2...
+raxmlHPC-AVX2 -f A -p 1 -m GTRGAMMA -s /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/core.full.aln.phylip -n core.full.iteration_4.internal -t /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/tmphqaaak3i/core.full.iteration_4.tre.rooted > /dev/null 2>&1
+...done. Run time: 143.28 s
+
+Reinserting gaps into the alignment...
+...done. Run time: 150.79 s
+
+Running Gubbins to detect recombinations...
+gubbins -r -v core.full.aln.gaps.vcf -a 100 -b 10000 -f /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/tmphqaaak3i/core.full.aln -t core.full.iteration_4.tre -m 3 core.full.aln.gaps.snp_sites.aln
+...done. Run time: 183.02 s
+
+Checking for convergence...
+...done. Run time: 183.04 s
+
+*** Iteration 5 ***
+
+Constructing the phylogenetic tree with raxmlHPC-AVX2...
+raxmlHPC-AVX2 -f d -p 1 -m GTRCAT -V -s /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/core.full.iteration_4.tre.phylip -n core.full.iteration_5 -t /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/core.full.iteration_4.tre > /dev/null 2>&1
+...done. Run time: 184.64 s
+
+Reconstructing ancestral sequences with raxmlHPC-AVX2...
+raxmlHPC-AVX2 -f A -p 1 -m GTRGAMMA -s /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/core.full.aln.phylip -n core.full.iteration_5.internal -t /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/tmphqaaak3i/core.full.iteration_5.tre.rooted > /dev/null 2>&1
+...done. Run time: 187.43 s
+
+Reinserting gaps into the alignment...
+...done. Run time: 195.01 s
+
+Running Gubbins to detect recombinations...
+gubbins -r -v core.full.aln.gaps.vcf -a 100 -b 10000 -f /HDD2/lee/2023-05-26_SNP_benchmark_data_v2/snpcaster_20230809_113115_list/tmphqaaak3i/core.full.aln -t core.full.iteration_5.tre -m 3 core.full.aln.gaps.snp_sites.aln
+...done. Run time: 226.72 s
+
+Checking for convergence...
+Convergence after 5 iterations: Tree observed before.
+
+Exiting the main loop.
+
+Creating the final output...
+...finished. Total run time: 226.83 s
+========================= gubbins results conversion ==========================
+done!
+This is pairsnp 0.3.1
+done!
+recombination.tsv exist
+done!

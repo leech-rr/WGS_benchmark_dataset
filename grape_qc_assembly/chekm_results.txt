@@ -1,0 +1,16 @@
+Bin Id	Marker lineage	# genomes	# markers	# marker sets	0	1	2	3	4	5+	Completeness	Contamination	Strain heterogeneity
+DRR147067	f__Enterobacteriaceae (UID5162)	88	1207	328	2	1201	4	0	0	0	99.93	0.31	0.00
+DRR147069	f__Enterobacteriaceae (UID5162)	88	1207	328	2	1200	5	0	0	0	99.93	0.36	0.00
+DRR147072	f__Enterobacteriaceae (UID5162)	88	1207	328	2	1201	4	0	0	0	99.93	0.31	0.00
+DRR147075	f__Enterobacteriaceae (UID5162)	88	1207	328	2	1200	5	0	0	0	99.93	0.36	0.00
+DRR147079	f__Enterobacteriaceae (UID5162)	88	1207	328	2	1199	6	0	0	0	99.93	0.51	0.00
+DRR149584	f__Enterobacteriaceae (UID5124)	134	1172	336	1	1168	3	0	0	0	99.97	0.43	33.33
+DRR149590	f__Enterobacteriaceae (UID5124)	134	1172	336	1	1168	3	0	0	0	99.97	0.43	0.00
+DRR149598	f__Enterobacteriaceae (UID5124)	134	1172	336	1	1167	4	0	0	0	99.97	0.48	25.00
+DRR149646	f__Enterobacteriaceae (UID5124)	134	1172	336	1	1169	2	0	0	0	99.97	0.33	0.00
+DRR149690	f__Enterobacteriaceae (UID5124)	134	1172	336	1	1169	2	0	0	0	99.97	0.33	0.00
+DRR149748	f__Enterobacteriaceae (UID5124)	134	1172	336	1	1169	2	0	0	0	99.97	0.33	0.00
+DRR149750	f__Enterobacteriaceae (UID5124)	134	1172	336	1	1169	2	0	0	0	99.97	0.33	0.00
+DRR149762	f__Enterobacteriaceae (UID5124)	134	1172	336	1	1169	2	0	0	0	99.97	0.33	0.00
+DRR149766	f__Enterobacteriaceae (UID5124)	134	1172	336	1	1169	2	0	0	0	99.97	0.33	0.00
+DRR149771	f__Enterobacteriaceae (UID5124)	134	1172	336	1	1169	2	0	0	0	99.97	0.33	0.00

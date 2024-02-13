@@ -1,0 +1,14 @@
+This is SNPcaster 
+version :2023-06-05
+list_name : list
+repeats_file_name : repeats.tsv
+Reference file name : Sakai_BA000007.fas
+Clustered SNP removal (bp) : 10
+Recombinogenic region detection (Gubbins) : ON 
+
+Removed SNPs in repeat region : 2328
+Removed SNPs in recombinogenic region : 3033
+Number of informative site before Gubbins : 35659
+Number of informative site after Gubbins : 32626
+Core_genome size before Gubbins (bp) : 3964017
+Core_genome size after Gubbins (bp) : 3764817

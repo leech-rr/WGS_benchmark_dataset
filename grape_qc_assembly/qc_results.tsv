@@ -1,0 +1,16 @@
+strain	no.of_reads	total_read_length	coverage	#contigs	Largest_contig	Total_length	Marker_lineage	Completeness	Contamination	qc_results	qc_coverage	qc_#_contigs	qc_Total_length	qc_Completeness	qc_Comtamination
+DRR147067	1154412	335803419	61.0551670909091	178	434806	5117431	f__Enterobacteriaceae (UID5162)	99.93	0.31	PASS	pass	pass	pass	pass	pass
+DRR147069	1250569	364082817	66.1968758181818	193	434985	5185167	f__Enterobacteriaceae (UID5162)	99.93	0.36	PASS	pass	pass	pass	pass	pass
+DRR147072	1192823	346780345	63.0509718181818	183	434806	5124852	f__Enterobacteriaceae (UID5162)	99.93	0.31	PASS	pass	pass	pass	pass	pass
+DRR147075	1032502	299954394	54.5371625454545	190	434985	5186337	f__Enterobacteriaceae (UID5162)	99.93	0.36	PASS	pass	pass	pass	pass	pass
+DRR147079	1172467	341279434	62.0508061818182	215	435066	5362735	f__Enterobacteriaceae (UID5162)	99.93	0.51	PASS	pass	pass	pass	pass	pass
+DRR149584	1578898	434360604	78.9746552727273	198	420006	5416442	f__Enterobacteriaceae (UID5124)	99.97	0.43	PASS	pass	pass	pass	pass	pass
+DRR149590	1215805	332184254	60.3971370909091	212	345167	5418654	f__Enterobacteriaceae (UID5124)	99.97	0.43	PASS	pass	pass	pass	pass	pass
+DRR149598	1667239	469369737	85.3399521818182	183	375482	5617379	f__Enterobacteriaceae (UID5124)	99.97	0.48	PASS	pass	pass	pass	pass	pass
+DRR149646	1149391	315153220	57.3005854545455	200	375998	5421642	f__Enterobacteriaceae (UID5124)	99.97	0.33	PASS	pass	pass	pass	pass	pass
+DRR149690	1666376	409339981	74.4254510909091	206	375632	5478547	f__Enterobacteriaceae (UID5124)	99.97	0.33	PASS	pass	pass	pass	pass	pass
+DRR149748	2184094	484248071	88.0451038181818	203	419719	5392682	f__Enterobacteriaceae (UID5124)	99.97	0.33	PASS	pass	pass	pass	pass	pass
+DRR149750	2118817	500184269	90.9425943636364	212	375453	5396956	f__Enterobacteriaceae (UID5124)	99.97	0.33	PASS	pass	pass	pass	pass	pass
+DRR149762	2281519	504878084	91.7960152727273	193	375453	5395672	f__Enterobacteriaceae (UID5124)	99.97	0.33	PASS	pass	pass	pass	pass	pass
+DRR149766	1963696	427251590	77.6821072727273	206	375453	5390886	f__Enterobacteriaceae (UID5124)	99.97	0.33	PASS	pass	pass	pass	pass	pass
+DRR149771	1214382	284260483	51.6837241818182	208	375453	5366824	f__Enterobacteriaceae (UID5124)	99.97	0.33	PASS	pass	pass	pass	pass	pass
