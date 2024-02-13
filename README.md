@@ -7,9 +7,9 @@ Shiga toxin-producing E. coli (STEC).  STEC genome from three indepenedent outbr
 
 ## Dataset
 * Outbreak 1: E. coli O157:H7. DRR149584, DRR149590, DRR149598, DRR149646, DRR149690  (Ref. 1)
-* Outbreak 2: E. coli O157:H7. DRR149748, DRR149750, DRR149762, DRR149766, DRR149771
+* Outbreak 2: E. coli O157:H7. DRR149748, DRR149750, DRR149762, DRR149766, DRR149771  (Ref. 1)
 
-* Outbreak 3: E. coli O121:H19. DRR147067, DRR147069, DRR147072, DRR147075, DRR147079
+* Outbreak 3: E. coli O121:H19. DRR147067, DRR147069, DRR147072, DRR147075, DRR147079  (Ref. 2)
 
 ## Content
 1. ***SNPcaster*** folder
@@ -23,9 +23,9 @@ Shiga toxin-producing E. coli (STEC).  STEC genome from three indepenedent outbr
 
 ## How to download  short-read files
 1. Install SRA toolkit and use fasterq-dump.sh
-* proxy setting may be required depending your instition.
-`fasterq-dump.sh list`
-* Note that the path for sra-toolkit should be changed to the path in your computer (line xx of fsterq-dump.sh).
+`fasterq-dump_2023-05-30.sh list THREADS`
+* Note that proxy setting may be required for sra-tools.
+* The dependencies are shown in **fasterq-dump_2023-05-30.sh**.
 
 2. Manually download from SRA site
 
