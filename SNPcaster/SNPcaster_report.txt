@@ -1,14 +1,20 @@
 This is SNPcaster 
-version :2023-06-05
-list_name : list
-repeats_file_name : repeats.tsv
-Reference file name : Sakai_BA000007.fas
-Clustered SNP removal (bp) : 10
-Recombinogenic region detection (Gubbins) : ON 
+Version : 0.9.2
+Strain list : sample_list
+Fastq list : list_fastq.tsv
+Mask file : 
+Reference file : ../../sample_data/ehec/Sakai_BA000007.fasta
+Clustered SNP removal (bp) : 0
+Threads : 8
+BactSNP allele-freq : 0.9
+BactSNP jobs : 4
+Recombinogenic region detection (Gubbins) : OFF
 
-Removed SNPs in repeat region : 2328
-Removed SNPs in recombinogenic region : 3033
-Number of informative site before Gubbins : 35659
-Number of informative site after Gubbins : 32626
-Core_genome size before Gubbins (bp) : 3964017
-Core_genome size after Gubbins (bp) : 3764817
+Core genome size (bp) 
+Before Gubbins : 4291372
+
+Number of informative SNP sites (with reference) 
+No masking: 74374
+
+Number of informative SNP sites (without reference) 
+No masking: 74327

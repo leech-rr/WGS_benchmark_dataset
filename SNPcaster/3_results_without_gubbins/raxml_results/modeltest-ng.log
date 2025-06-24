@@ -1,0 +1,243 @@
+Physical cores: 9
+Logical cores:  18
+Memory:         93GB
+Extensions:     AVX
+
+WARNING: Partition DATA: Sequences DRR149750 and DRR149771 are identical
+WARNING: Empirical invariant sites proportion for partition DATA is 0
+         You should consider excluding +I and +I+G models from the analysis
+
+WARNING: MSA has not enough sites to infer reliable results
+Creating new checkpoint file: raxml_results_20250620_164202/modeltest-ng.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        final_snp.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            16
+  #sites:           74374
+  #patterns:        91
+  Max. thread mem:  0 MB
+
+Output:
+  Log:           raxml_results_20250620_164202/modeltest-ng.log
+  Starting tree: raxml_results_20250620_164202/modeltest-ng.tree
+  Results:       raxml_results_20250620_164202/modeltest-ng.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          16/9
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> modeltest-ng -i final_snp.fasta -t ml -p 16 --output raxml_results_20250620_164202/modeltest-ng 
+
+
+Partition 1/1
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:00:03
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM                7   -205916.8288    412237.4646         0.0000    0.9930
+       2  TVM+I              8   -205916.8612    412248.7463        11.2817    0.0035
+       3  GTR                8   -205917.0607    412249.1454        11.6808    0.0029
+       4  TVMef              4   -205941.0723    412252.3011        14.8365    0.0006
+       5  GTR+I              9   -205917.6166    412261.4739        24.0093    0.0000
+       6  TVMef+I            5   -205941.1824    412263.7382        26.2736    0.0000
+       7  SYM                5   -205941.8387    412265.0507        27.5861    0.0000
+       8  TVM+G4             8   -205927.9982    412271.0203        33.5558    0.0000
+       9  SYM+I              6   -205941.7033    412275.9967        38.5321    0.0000
+      10  GTR+G4             9   -205927.6888    412281.6183        44.1537    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              TVM
+lnL:                -205916.8288
+Frequencies:        0.2564 0.2438 0.2479 0.2519
+Subst. Rates:       1.0979 14.2531 0.9376 0.2419 14.2531 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              412237.4646
+Weight:             0.9930
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0035
+Gamma:              0.0000
+Gamma-Inv:          0.0000
+Frequencies:        0.9994
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0000
+Alpha:              94.8066
+Alpha-P.Inv:        94.8066
+P.Inv-Alpha:        0.0000
+Frequencies:        0.2564 0.2438 0.2479 0.2519 
+
+Commands:
+  > phyml  -i final_snp.fasta -m 012314 -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s final_snp.fasta -c 1 -m GTRCATX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa final_snp.fasta --model TVM
+  > paup -s final_snp.fasta
+  > iqtree -s final_snp.fasta -m TVM
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM                7   -205916.8288    411905.6576         0.0000    0.5850
+       2  TVM+I              8   -205916.8612    411907.7224         2.0649    0.2083
+       3  GTR                8   -205917.0607    411908.1215         2.4639    0.1707
+       4  GTR+I              9   -205917.6166    411911.2332         5.5756    0.0360
+       5  TVM+G4             8   -205927.9982    411929.9965        24.3389    0.0000
+       6  GTR+G4             9   -205927.6888    411931.3776        25.7200    0.0000
+       7  TVM+I+G4           9   -205928.1136    411932.2271        26.5696    0.0000
+       8  GTR+I+G4          10   -205927.9255    411933.8509        28.1934    0.0000
+       9  TVMef              4   -205941.0723    411948.1447        42.4871    0.0000
+      10  TVMef+I            5   -205941.1824    411950.3649        44.7073    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TVM
+lnL:                -205916.8288
+Frequencies:        0.2564 0.2438 0.2479 0.2519
+Subst. Rates:       1.0979 14.2531 0.9376 0.2419 14.2531 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              411905.6576
+Weight:             0.5850
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.2443
+Gamma:              0.0000
+Gamma-Inv:          0.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0000
+Alpha:              94.8066
+Alpha-P.Inv:        94.8066
+P.Inv-Alpha:        0.0000
+Frequencies:        0.2564 0.2438 0.2479 0.2519 
+
+Commands:
+  > phyml  -i final_snp.fasta -m 012314 -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s final_snp.fasta -c 1 -m GTRCATX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa final_snp.fasta --model TVM
+  > paup -s final_snp.fasta
+  > iqtree -s final_snp.fasta -m TVM
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM                7   -205916.8288    411905.6576         0.0000    0.5850
+       2  TVM+I              8   -205916.8612    411907.7224         2.0649    0.2083
+       3  GTR                8   -205917.0607    411908.1215         2.4639    0.1707
+       4  GTR+I              9   -205917.6166    411911.2332         5.5756    0.0360
+       5  TVM+G4             8   -205927.9982    411929.9965        24.3389    0.0000
+       6  GTR+G4             9   -205927.6888    411931.3776        25.7200    0.0000
+       7  TVM+I+G4           9   -205928.1136    411932.2271        26.5696    0.0000
+       8  GTR+I+G4          10   -205927.9255    411933.8509        28.1934    0.0000
+       9  TVMef              4   -205941.0723    411948.1447        42.4871    0.0000
+      10  TVMef+I            5   -205941.1824    411950.3649        44.7073    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TVM
+lnL:                -205916.8288
+Frequencies:        0.2564 0.2438 0.2479 0.2519
+Subst. Rates:       1.0979 14.2531 0.9376 0.2419 14.2531 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              411905.6576
+Weight:             0.5850
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.2443
+Gamma:              0.0000
+Gamma-Inv:          0.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0000
+Alpha:              94.8066
+Alpha-P.Inv:        94.8066
+P.Inv-Alpha:        0.0000
+Frequencies:        0.2564 0.2438 0.2479 0.2519 
+
+Commands:
+  > phyml  -i final_snp.fasta -m 012314 -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s final_snp.fasta -c 1 -m GTRCATX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa final_snp.fasta --model TVM
+  > paup -s final_snp.fasta
+  > iqtree -s final_snp.fasta -m TVM
+
+There are 23 different topologies
+Topologies written to raxml_results_20250620_164202/modeltest-ng.topos
+
+topo_id   models_count   bic_support   aic_support   aicc_support
+-----------------------------------------------------------------
+      1             46       0.99940       1.00000       1.00000
+     20              1       0.00060       0.00000       0.00000
+     19              1       0.00000       0.00000       0.00000
+     15              1       0.00000       0.00000       0.00000
+      6              5       0.00000       0.00000       0.00000
+     10              1       0.00000       0.00000       0.00000
+      3              3       0.00000       0.00000       0.00000
+     14              1       0.00000       0.00000       0.00000
+     21              1       0.00000       0.00000       0.00000
+      2             10       0.00000       0.00000       0.00000
+     17              1       0.00000       0.00000       0.00000
+      5              2       0.00000       0.00000       0.00000
+      4              3       0.00000       0.00000       0.00000
+      9              1       0.00000       0.00000       0.00000
+     12              2       0.00000       0.00000       0.00000
+      7              1       0.00000       0.00000       0.00000
+     16              1       0.00000       0.00000       0.00000
+     13              1       0.00000       0.00000       0.00000
+     18              1       0.00000       0.00000       0.00000
+     11              1       0.00000       0.00000       0.00000
+      8              2       0.00000       0.00000       0.00000
+     22              1       0.00000       0.00000       0.00000
+     23              1       0.00000       0.00000       0.00000
+
+extended majority-rule consensus: ((DRR149646,DRR149584)[1.00000],(DRR149598,DRR149590)[1.00000],(DRR149690,(REF,((DRR149748,(DRR149771,(DRR149750,(DRR149766,DRR149762)[0.99940])[0.99940])[0.99940])[1.00000],(DRR147072,((DRR147069,DRR147067)[1.00000],(DRR147079,DRR147075)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000]);
+strict consensus: (REF,DRR149771,DRR149766,DRR149762,DRR149750,DRR149748,DRR149690,DRR149646,DRR149598,DRR149590,DRR149584,DRR147079,DRR147075,DRR147072,DRR147069,DRR147067);
+
+Summary:
+
+Partition 1/1:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC                 TVM   412237.4646        0.9930
+       AIC                 TVM   411905.6576        0.5850
+      AICc                 TVM   411905.6576        0.5850
+
+Execution results written to raxml_results_20250620_164202/modeltest-ng.out
+Starting tree written to raxml_results_20250620_164202/modeltest-ng.tree
