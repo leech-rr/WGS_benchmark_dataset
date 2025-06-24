@@ -27,6 +27,7 @@ Shiga toxin-producing E. coli (STEC).  STEC genome from three indepenedent outbr
 ***
 ## How to download  short-read files
 1. Install SRA toolkit and use fasterq-dump.sh
+
 `fasterq-dump_2023-05-30.sh list THREADS`
 * Note that proxy setting may be required for sra-tools.
 * The dependencies are shown in **fasterq-dump_2023-05-30.sh**.
